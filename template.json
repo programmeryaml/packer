@@ -1,8 +1,6 @@
 {
   "variables": {
-    "ansible_playbook_file": "",
-    "ansible_host": "",
-    "ansible_user": ""
+    "ansible_playbook_file": ""
   },
   "builders": [
     {
@@ -20,9 +18,7 @@
       "playbook_file": "{{user `ansible_playbook_file`}}",
       "extra_arguments": [
         "-vvvv"
-      ],
-      "user": "{{user `ansible_user`}}",
-      "host": "{{user `ansible_host`}}"
+      ]
     }
   ]
 }
