@@ -22,7 +22,7 @@
       "communicator": "ssh",
       "ssh_username": "ubuntu",
       "ssh_private_key_file": "/root/.ssh/ubuntu.pem",
-      "ssh_agent_auth": false,
+      "ssh_agent_auth": false
     }
   ]
 }
