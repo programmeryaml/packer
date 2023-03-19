@@ -9,7 +9,7 @@
       "source_ami": "ami-082b1f4237bd816a1",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "aws_ami_name": "my-image-{{timestamp}}"
+      "ami_name": "my-image-{{timestamp}}"
     }
   ],
   "provisioners": [
