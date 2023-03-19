@@ -1,8 +1,7 @@
 {
   "variables": {
     "aws_ami_name": "-{{timestamp}}",
-    "aws_region": "",
-    "instance_role": "SSMInstanceProfile"
+    "aws_region": ""
   },
 
   "builders": [
@@ -19,11 +18,7 @@
         },
         "owners": ["099720109477"],
         "most_recent": true
-      },
-      "communicator": "ssh",
-      "ssh_username": "ubuntu",
-      "ssh_interface": "session_manager",
-      "iam_instance_profile": "{{user `instance_role`}}"
+      }
     }
   ]
 }
