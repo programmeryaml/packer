@@ -1,15 +1,17 @@
 {
   "variables": {
-    "ansible_playbook_path": ""
+    "ansible_playbook_path": "",
+    "aws_ami_name": "",
+    "aws_region": ""
   },
   "builders": [
     {
       "type": "amazon-ebs",
-      "region": "us-west-2",
+      "region": "{{user `aws_region`}}",
       "source_ami": "ami-082b1f4237bd816a1",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
-      "ami_name": "my-image-{{timestamp}}"
+      "ami_name": "{{user `aws_ami_name`}}"
     }
   ],
   "provisioners": [
