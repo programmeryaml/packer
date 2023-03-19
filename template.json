@@ -1,7 +1,7 @@
 {
   "variables": {
     "ansible_playbook_path": "",
-    "aws_ami_name": "",
+    "aws_ami_name": "-{{timestamp}}",
     "aws_region": ""
   },
   "builders": [
