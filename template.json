@@ -1,6 +1,6 @@
 {
   "variables": {
-    "ansible_playbook_file": ""
+    "ansible_playbook_path": ""
   },
   "builders": [
     {
@@ -15,7 +15,7 @@
   "provisioners": [
     {
       "type": "ansible",
-      "playbook_file": "{{user `ansible_playbook_file`}}",
+      "playbook_file": "{{user `ansible_playbook_path`}}",
       "extra_arguments": [
         "-vvvv"
       ]
