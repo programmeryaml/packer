@@ -1,0 +1,28 @@
+{
+  "variables": {
+    "ansible_playbook_file": "",
+    "ansible_host": "",
+    "ansible_user": ""
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "us-west-2",
+      "source_ami": "ami-0c55b159cbfafe1f0",
+      "instance_type": "t2.micro",
+      "ssh_username": "ubuntu",
+      "ami_name": "my-image-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "{{user `ansible_playbook_file`}}",
+      "extra_arguments": [
+        "-vvvv"
+      ],
+      "user": "{{user `ansible_user`}}",
+      "host": "{{user `ansible_host`}}"
+    }
+  ]
+}
