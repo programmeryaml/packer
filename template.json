@@ -19,9 +19,9 @@
         "owners": ["099720109477"],
         "most_recent": true
       },
-      "communicator": "ssh",
       "ssh_username": "ubuntu",
-      "ssh_agent_auth": false
+      "ssh_agent_auth": false,
+      "ssh_pty": "true"
     }
   ]
 }
